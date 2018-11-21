@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>台灣就業通</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link  href= "./style.css"  rel= "stylesheet "  type= "text/css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<script src="./navbar.js"></script>
+		<!-- Hover #2 -->
+
+		<script type="text/javascript">
+			$(window).on('load',function(){
+			$('#login_modal').modal('show');
+			});
+			
+		</script>
+		<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">請先登入</h5>
+						
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">帳號:</label>
+								<input type="text" class="form-control" id="recipient-name">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">密碼:</label>
+								<input type="password" class="form-control" id="recipient-name">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<a href="./signup.html"><button type="button" class="btn btn-secondary" style="margin-right: 345px;">註冊</button></a>
+						<button type="button" class="btn btn-primary" onclick="loginOnclick()">登入</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function loginOnclick(){
+			$('#login_modal').modal('hide');
+			}
+		</script>
+		
+		<div data-aos="fade-right" style="float: left; margin-left: 100px;">
+			<div class="btn-two" style="float: left; margin-left: 200px; margin-top: 180px; height: 300px; width: 400px;">
+				<a href="./field.html"><span style="margin-top: 130px; font-size: 45px; color:white;">查詢學門</span></a>
+			</div>
+		</div>
+		
+		<div data-aos="fade-left">
+			<div class="btn-two" style="float: left; background-color: #00DDAA; margin-left: 200px; margin-top: 180px; height: 300px; width: 400px;">
+				<a href="./jobtype.html"><span style="margin-top: 130px; font-size: 45px; color:white;">查詢職缺</span></a>
+			</div>
+		</div>
+		</body>
+		
+	</body>	
+
+	<script>
+		AOS.init({ duration: 2000 });
+		
+	</script>
+	</html>
