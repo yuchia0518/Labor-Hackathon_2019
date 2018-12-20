@@ -1,161 +1,13 @@
 window.onload = function() {
-    // var options1 = new CanvasJS.Chart("chartContainer", {
-    //     title: {
-    //         text: "起薪統計"
-    //     },
-    //     subtitles: [{
-    //         text: "2018"
-    //     }],
-    //     animationEnabled: true,
-    //     axisX: {
-    //         labelAngle: 180
-    //     },
-    //     width: 600,
-    //     height: 480,
-    //     data: [{
-
-    //         type: "column",
-    //         startAngle: 40,
-    //         toolTipContent: "<b>{label}</b>: {y}%",
 
 
-    //         indexLabelFontSize: 16,
-    //         indexLabel: "{y}%",
+    var piechart_title = "";
+    
 
-    //         dataPoints: [{
-    //             y: 48.36,
-    //             label: "A"
-    //         }, {
-    //             y: 26.85,
-    //             label: "B"
-    //         }, {
-    //             y: 1.49,
-    //             label: "C"
-    //         }, {
-    //             y: 6.98,
-    //             label: "D"
-    //         }, {
-    //             y: 6.53,
-    //             label: "E"
-    //         }, {
-    //             y: 2.45,
-    //             label: "F"
-    //         }, {
-    //             y: 3.32,
-    //             label: "G"
-    //         }, {
-    //             y: 4.03,
-    //             label: "H"
-    //         }, {
-    //             y: 2.36,
-    //             label: "I"
-    //         }, {
-    //             y: 9.36,
-    //             label: "J"
-    //         }, {
-    //             y: 43.36,
-    //             label: "K"
-    //         }, {
-    //             y: 21.36,
-    //             label: "L"
-    //         }, ]
-    //     }]
-    // });
-
-
-
-
-
-    // var options2 = new CanvasJS.Chart("chartContainer2", {
-    //     title: {
-    //         text: "各學門起薪調查"
-    //     },
-    //     subtitles: [{
-    //         text: "2018"
-    //     }],
-    //     animationEnabled: true,
-    //     dataPointWidth: 27,
-    //     axisX: {
-    //         labelAngle: 180
-    //     },
-
-
-    //     data: [{
-    //         type: "column",
-    //         click: onClick,
-    //         startAngle: 40,
-    //         toolTipContent: "<b>{label}</b>: {y}元",
-
-
-    //         indexLabelFontSize: 13,
-    //         indexLabel: "{y}元",
-
-    //         dataPoints: [{
-    //             y: 30000,
-    //             label: "法政學群"
-    //         }, {
-    //             y: 40000,
-    //             label: "工程學群"
-    //         }, {
-    //             y: 35000,
-    //             label: "資訊學群"
-    //         }, {
-    //             y: 22000,
-    //             label: "數理化學群"
-    //         }, {
-    //             y: 10000,
-    //             label: "教育學群"
-    //         }, {
-    //             y: 15000,
-    //             label: "管理學群"
-    //         }, {
-    //             y: 25000,
-    //             label: "社會心理學群"
-    //         }, {
-    //             y: 500,
-    //             label: "文史哲學群"
-    //         }, {
-    //             y: 8000,
-    //             label: "遊憩與運動學群"
-    //         }, {
-    //             y: 30000,
-    //             label: "財經學群"
-    //         }, {
-    //             y: 100,
-    //             label: "藝術學群"
-    //         }, {
-    //             y: 32000,
-    //             label: "外語學群"
-    //         }, {
-    //             y: 60000,
-    //             label: "醫藥衛生學群"
-    //         }, {
-    //             y: 24000,
-    //             label: "地球與環境學群"
-    //         }, {
-    //             y: 26000,
-    //             label: "生命科學學群"
-    //         }, {
-    //             y: 36000,
-    //             label: "建築與設計學群"
-    //         }, {
-    //             y: 27000,
-    //             label: "大眾傳播學群"
-    //         }, {
-    //             y: 38000,
-    //             label: "生物資源學群"
-    //         }]
-    //     }]
-    // });
-
-
-
-
-
-    //社會學門
-    var options3 = new CanvasJS.Chart("chartContainer3", {
+    //預設進入 大學部
+    var options = new CanvasJS.Chart("chartContainer3", {
         title: {
-            text: "學士平均薪水"
+            text: "學士平均薪資"
         },
         subtitles: [{
             text: "2018"
@@ -205,10 +57,199 @@ window.onload = function() {
         }]
     });
 
-    // options1.render();
 
-    // options2.render();
-    options3.render();
+    options.render();
+    // 學士 
+        $("#college_salary").click(function() {
+           
+
+
+            var options = new CanvasJS.Chart("chartContainer3", {
+                title: {
+                    text: "學士平均薪資"
+                },
+                subtitles: [{
+                    text: "2018"
+                }],
+                animationEnabled: true,
+                dataPointWidth: 40,
+                axisX: {
+                    labelAngle: 180
+                },
+
+
+                data: [{
+                    type: "column",
+                    click: onClick,
+                    startAngle: 40,
+                    toolTipContent: "<b>{label}</b>: {y}元",
+
+
+                    indexLabelFontSize: 13,
+                    indexLabel: "{y}元",
+
+                    dataPoints: [{
+                        y: 30000,
+                        label: "社會學"
+                    }, {
+                        y: 40000,
+                        label: "社會工作學"
+                    }, {
+                        y: 35000,
+                        label: "心理學"
+                    }, {
+                        y: 22000,
+                        label: "輔導學"
+                    }, {
+                        y: 10000,
+                        label: "幼兒保育學"
+                    }, {
+                        y: 15000,
+                        label: "老年服務學"
+                    }, {
+                        y: 25000,
+                        label: "宗教與生死學"
+                    }, {
+                        y: 5000,
+                        label: "人類與民族學"
+                    }]
+                }]
+            });
+
+
+            options.render();
+            $("#chartContainer3").CanvasJSChart(options);
+
+        });
+
+    // 碩士班 日間部
+        $("#master_salary_daytime").click(function() {
+           
+
+
+            var options = new CanvasJS.Chart("chartContainer3", {
+                title: {
+                    text: "碩士日間部平均薪資"
+                },
+                subtitles: [{
+                    text: "2018"
+                }],
+                animationEnabled: true,
+                dataPointWidth: 40,
+                axisX: {
+                    labelAngle: 180
+                },
+
+
+                data: [{
+                    type: "column",
+                    click: onClick,
+                    startAngle: 40,
+                    toolTipContent: "<b>{label}</b>: {y}元",
+
+
+                    indexLabelFontSize: 13,
+                    indexLabel: "{y}元",
+
+                    dataPoints: [{
+                        y: 30000,
+                        label: "社會學"
+                    }, {
+                        y: 40000,
+                        label: "社會工作學"
+                    }, {
+                        y: 35000,
+                        label: "心理學"
+                    }, {
+                        y: 22000,
+                        label: "輔導學"
+                    }, {
+                        y: 10000,
+                        label: "幼兒保育學"
+                    }, {
+                        y: 15000,
+                        label: "老年服務學"
+                    }, {
+                        y: 25000,
+                        label: "宗教與生死學"
+                    }, {
+                        y: 5000,
+                        label: "人類與民族學"
+                    }]
+                }]
+            });
+
+
+            options.render();
+            $("#chartContainer3").CanvasJSChart(options);
+
+        });
+
+        // 碩士班 夜間部
+        $("#master_salary_nighttime").click(function() {
+            //window.location.reload();
+           // alert("aaaa");
+
+
+            var options = new CanvasJS.Chart("chartContainer3", {
+                title: {
+                    text: "碩士夜間部平均薪水"
+                },
+                subtitles: [{
+                    text: "2018"
+                }],
+                animationEnabled: true,
+                dataPointWidth: 40,
+                axisX: {
+                    labelAngle: 180
+                },
+
+
+                data: [{
+                    type: "column",
+                    click: onClick,
+                    startAngle: 40,
+                    toolTipContent: "<b>{label}</b>: {y}元",
+
+
+                    indexLabelFontSize: 13,
+                    indexLabel: "{y}元",
+
+                    dataPoints: [{
+                        y: 30000,
+                        label: "社會學"
+                    }, {
+                        y: 40000,
+                        label: "社會工作學"
+                    }, {
+                        y: 35000,
+                        label: "心理學"
+                    }, {
+                        y: 22000,
+                        label: "輔導學"
+                    }, {
+                        y: 10000,
+                        label: "幼兒保育學"
+                    }, {
+                        y: 15000,
+                        label: "老年服務學"
+                    }, {
+                        y: 25000,
+                        label: "宗教與生死學"
+                    }, {
+                        y: 5000,
+                        label: "人類與民族學"
+                    }]
+                }]
+            });
+
+
+            options.render();
+            $("#chartContainer3").CanvasJSChart(options);
+
+        });
+    
+
 
 
 
@@ -217,7 +258,7 @@ window.onload = function() {
         exportEnabled: true,
         animationEnabled: true,
         title: {
-            text: "心理學系" 
+            text: "心理學系"
         },
         legend: {
             cursor: "pointer",
@@ -249,15 +290,7 @@ window.onload = function() {
 
 
 
-
-
-
-
-
-
-    // $("#chartContainer").CanvasJSChart(options1);
-    // $("#chartContainer2").CanvasJSChart(options2);
-    $("#chartContainer3").CanvasJSChart(options3);
+    $("#chartContainer3").CanvasJSChart(options);
 
     // 這個onclick方法要呼叫Modal
 
@@ -279,37 +312,7 @@ function explodePie(e) {
     e.chart.render();
 
 }
-// window.onload = function () {
-// var options2 = {
-// 	title: {
-// 		text: "Desktop OS Market Share in 2017"
-// 	},
-// 	subtitles: [{
-// 		text: "As of November, 2017"
-// 	}],
-// 	animationEnabled: true,
-// 	data: [{
-// 		type: "column",
-// 		startAngle: 40,
-// 		toolTipContent: "<b>{label}</b>: {y}%",
-// 		showInLegend: "false",
-// 		legendText: "{label}",
-// 		indexLabelFontSize: 16,
-// 		indexLabel: "{label} - {y}%",
-// 		dataPoints: [
-// 			{ y: 48.36, label: "Windows 7" },
-// 			{ y: 26.85, label: "Windows 10" },
-// 			{ y: 1.49, label: "Windows 8" },
-// 			{ y: 6.98, label: "Windows XP" },
-// 			{ y: 6.53, label: "Windows 8.1" },
-// 			{ y: 2.45, label: "Linux" },
-// 			{ y: 3.32, label: "Mac OS X 10.12" },
-// 			{ y: 4.03, label: "Others" }
-// 		]
-// 	}]
-// };
-// $("#chartContainer2").CanvasJSChart(options2);
-// }
+
 
 
 // 捲軸事件

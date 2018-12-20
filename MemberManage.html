@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>會員管理</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link  href= "./style.css"  rel= "stylesheet "  type= "text/css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<style type="text/css">
+		#test{
+			width: 800px;
+			height: 300px;
+			border-color: green;
+		}
+	</style>
+
+	</head>
+
+	<body>
+		<script src="./navbar.js"></script>
+		<!-- Hover #2 -->
+
+		<div class="container" style="margin-top: 120px;">
+		<section>
+			<h1 class="entry-title"><span style="font-size: 25px;">會員管理</span> </h1>
+			<hr>
+				<button style="border-color: gray">忘記帳號</button>
+				<button style="margin-left: 20px; border-color: gray">忘記密碼</button>
+			<br>
+			<br>
+			
+			<script type="text/javascript" language="javascript">
+			  window.onload = autocreate;
+		      function autocreate(){
+
+		        var data = [{
+		          "id": 1111, 
+		          "name": 'fuck', 
+		          "a": "A111111111", 
+		          "b": "hello@gmail.com", 
+		          "c": "0900-000000", 
+		          "d": "d"},
+		        {"id": 545, "name": 'shit', "a": "A222222222", "b": "world@gmail.com", "c": "0911-111111", "d": "T"}, {"id": 999, "name": 'fuck', "a": "a", "b": "b", "c": "b", "d": "T"},{"id": 1010, "name": 'fuck', "a": "a", "b": "b", "c": "b", "d": "T"},{"id": 1010, "name": 'fuck', "a": "a", "b": "b", "c": "b", "d": "T"}];
+		        var html = '';
+		        for (var d of data) {
+
+		          html += `<tr><td>${d.id}</td><td>${d.name}</td><td>${d.a}</td><td>${d.b}</td><td>${d.c}</td><td><input type="checkbox" style=width:20px></td></tr>`;        
+		        }
+		        // html = '<tr><td>abc</td><td>aaa</td><td>ccc</td><td>dddd</td><td>eee</td><td>gggg</td></tr>';
+		        // document.getElementById('test').innerHTML = html;
+		        $('#test').append(html);
+		        return;
+		    	}	
+			</script>
+	
+			<div id="d1" style="height:400px; width:300px;">
+		      <table id='test' border="1">
+		        <tr>
+		          
+		          <th>帳號</th>
+		          <th>密碼</th>
+		          <th>身分證</th>
+		          <th>E-mail</th>
+		          <th>手機</th>
+		          <th>狀態</th>
+
+		        </tr>
+		      </table>
+		    </div>
+		    <hr>
+		    <button style="width: 60px; border-color: gray" onclick="window.location.reload()">送出</button>
+		</section>
+		
+
+		
+		<script type="text/javascript">
+			$(window).on('load',function(){
+			$('#login_modal').modal('show');
+			});
+		</script>
+		
+
+		<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog" role="document">
+				<form class="modal-content">
+					<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">管理員登入</h5>
+					</div>
+
+					<div class="modal-body">
+						<div>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">帳號:</label>
+								<input type="text" class="form-control" id="recipient-name">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">密碼:</label>
+								<input type="password" class="form-control" id="recipient-name">
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="loginOnclick()">登入</button>
+					</div>
+
+			    </form>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			function loginOnclick(){
+			$('#login_modal').modal('hide');
+			}
+		</script>
+
+
+		
+		
+	</body>
+</html>
