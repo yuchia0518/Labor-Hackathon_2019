@@ -3,7 +3,7 @@ window.onload = function() {
 
     var piechart_title = "";
     
-
+    
     //預設進入 大學部
     var options = new CanvasJS.Chart("chartContainer3", {
         title: {
@@ -55,8 +55,12 @@ window.onload = function() {
                 label: "人類與民族學"
             }]
         }]
+
     });
 
+    
+
+  
 
     options.render();
     // 學士 
@@ -118,6 +122,7 @@ window.onload = function() {
 
 
             options.render();
+
             $("#chartContainer3").CanvasJSChart(options);
 
         });
