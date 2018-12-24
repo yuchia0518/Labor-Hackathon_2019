@@ -127,14 +127,14 @@ window.onload = function() {
 
         });
 
-    // 碩士班 日間部
-        $("#master_salary_daytime").click(function() {
+    // 碩士班
+        $("#master_salary").click(function() {
            
 
 
             var options = new CanvasJS.Chart("chartContainer3", {
                 title: {
-                    text: "碩士日間部平均薪資"
+                    text: "碩士平均薪資"
                 },
                 subtitles: [{
                     text: "2018"
@@ -190,69 +190,7 @@ window.onload = function() {
 
         });
 
-        // 碩士班 夜間部
-        $("#master_salary_nighttime").click(function() {
-            //window.location.reload();
-           // alert("aaaa");
-
-
-            var options = new CanvasJS.Chart("chartContainer3", {
-                title: {
-                    text: "碩士夜間部平均薪水"
-                },
-                subtitles: [{
-                    text: "2018"
-                }],
-                animationEnabled: true,
-                dataPointWidth: 40,
-                axisX: {
-                    labelAngle: 180
-                },
-
-
-                data: [{
-                    type: "column",
-                    click: onClick,
-                    startAngle: 40,
-                    toolTipContent: "<b>{label}</b>: {y}元",
-
-
-                    indexLabelFontSize: 13,
-                    indexLabel: "{y}元",
-
-                    dataPoints: [{
-                        y: 30000,
-                        label: "社會學"
-                    }, {
-                        y: 40000,
-                        label: "社會工作學"
-                    }, {
-                        y: 35000,
-                        label: "心理學"
-                    }, {
-                        y: 22000,
-                        label: "輔導學"
-                    }, {
-                        y: 10000,
-                        label: "幼兒保育學"
-                    }, {
-                        y: 15000,
-                        label: "老年服務學"
-                    }, {
-                        y: 25000,
-                        label: "宗教與生死學"
-                    }, {
-                        y: 5000,
-                        label: "人類與民族學"
-                    }]
-                }]
-            });
-
-
-            options.render();
-            $("#chartContainer3").CanvasJSChart(options);
-
-        });
+       
     
 
 
@@ -300,6 +238,7 @@ window.onload = function() {
     // 這個onclick方法要呼叫Modal
 
     function onClick(e) {
+        alert(e.dataPoint.label); //e.dataPoint.label 得到科系名稱
         $('#field_column_Modal').modal('show');
     }
 
